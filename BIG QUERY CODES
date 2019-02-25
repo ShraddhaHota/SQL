@@ -1,0 +1,24 @@
+1)	SELECT country_name, year FROM `bigquery-public-data.world_bank_health_population.health_nutrition_population` WHERE country_name="Vietnam" and year= 2018
+2)	SELECT country_name, MAX(value) AS MAX_VALUE FROM `bigquery-public-data.world_bank_health_population.health_nutrition_population` GROUP BY country_name ORDER BY MAX_VALUE DESC
+3)	SELECT MIN(value) FROM `bigquery-public-data.world_bank_wdi.indicators_data`
+    RESULT= -9.82482129757206E15
+
+4)	SELECT SUM(day_of_crash) FROM `bigquery-public-data.nhtsa_traffic_fatalities.accident_2016`
+    RESULT- Row	  f0_	
+            1     547506
+5)	SELECT AVG(country_area) FROM `bigquery-public-data.census_bureau_international.country_names_area`
+    RESULT- Row	f0_	
+             1	577696.68377193
+6)	SELECT country_code FROM `bigquery-public-data.world_bank_intl_education.country_summary`
+
+7)	SELECT * FROM `bigquery-public-data.world_bank_intl_education.country_summary` WHERE short_name= "ARB"
+
+8)	SELECT COUNT(DISTINCT(country_code)) FROM `bigquery-public-data.world_bank_intl_education.country_summary`
+
+RESULT-                  Row	f0_	
+                          1	263
+
+9)	SELECT short_name FROM `bigquery-public-data.world_bank_intl_education.country_summary` WHERE short_name IS NOT NULL
+
+10)	SELECT country_code AS code FROM `bigquery-public-data.world_bank_intl_education.country_summary`
+
